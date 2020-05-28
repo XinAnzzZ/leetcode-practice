@@ -14,20 +14,20 @@
 // Related Topics 数组 哈希表
 
 
-package com.yuhangma.leetcode.practice.A01_hash;
+package com.yuhangma.leetcode.practice.A_hash;
 
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-public class TwoSum {
+public class Q1_TwoSum {
     public static void main(String[] args) {
         int[] nums = {2, 7, 11, 15};
-        Solution1 solution1 = new TwoSum().new Solution1();
+        Solution1 solution1 = new Q1_TwoSum().new Solution1();
         System.out.println(Arrays.toString(solution1.twoSum(nums, 26)));
 
 
-        Solution2 solution2 = new TwoSum().new Solution2();
+        Solution2 solution2 = new Q1_TwoSum().new Solution2();
         System.out.println(Arrays.toString(solution2.twoSum(nums, 26)));
 
     }

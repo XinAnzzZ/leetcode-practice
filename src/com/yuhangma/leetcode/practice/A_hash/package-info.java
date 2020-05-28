@@ -4,4 +4,4 @@
  * @author Moore
  * @since 2020/05/27
  */
-package com.yuhangma.leetcode.practice.A01_hash;
+package com.yuhangma.leetcode.practice.A_hash;
