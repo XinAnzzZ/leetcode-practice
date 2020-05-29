@@ -21,6 +21,10 @@ package com.yuhangma.leetcode.practice.B_linkedlist;
 
 import com.yuhangma.leetcode.practice.B_linkedlist.base.ListNode;
 
+/**
+ * @author Moore.Ma
+ * @since 2020/05/28
+ */
 public class Q19_RemoveNthNodeFromEndOfList {
     public static void main(String[] args) {
         Solution solution = new Q19_RemoveNthNodeFromEndOfList().new Solution();

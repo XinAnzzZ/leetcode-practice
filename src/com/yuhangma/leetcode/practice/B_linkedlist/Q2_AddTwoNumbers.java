@@ -18,6 +18,10 @@ package com.yuhangma.leetcode.practice.B_linkedlist;
 
 import com.yuhangma.leetcode.practice.B_linkedlist.base.ListNode;
 
+/**
+ * @author Moore.Ma
+ * @since 2020/05/28
+ */
 public class Q2_AddTwoNumbers {
     public static void main(String[] args) {
         Solution1 solution = new Q2_AddTwoNumbers().new Solution1();

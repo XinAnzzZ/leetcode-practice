@@ -20,6 +20,10 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * @author Moore.Ma
+ * @since 2020/05/28
+ */
 public class Q1_TwoSum {
     public static void main(String[] args) {
         int[] nums = {2, 7, 11, 15};
