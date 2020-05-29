@@ -14,7 +14,9 @@
 // Related Topics 链表 数学
 
 
-package com.yuhangma.leetcode.practice.A_hash;
+package com.yuhangma.leetcode.practice.B_linkedlist;
+
+import com.yuhangma.leetcode.practice.B_linkedlist.base.ListNode;
 
 public class Q2_AddTwoNumbers {
     public static void main(String[] args) {
@@ -26,20 +28,6 @@ public class Q2_AddTwoNumbers {
         while (listNode != null) {
             System.out.print(listNode.val + "->");
             listNode = listNode.next;
-        }
-    }
-
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-
-        public ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
         }
     }
 
