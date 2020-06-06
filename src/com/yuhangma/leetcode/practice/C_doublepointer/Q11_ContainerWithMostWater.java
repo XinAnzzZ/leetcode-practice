@@ -18,7 +18,7 @@
 // Related Topics 数组 双指针
 
 
-package com.yuhangma.leetcode.practice.doublepointer;
+package com.yuhangma.leetcode.practice.C_doublepointer;
 
 /**
  * @author Moore.Ma

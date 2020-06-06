@@ -24,7 +24,7 @@
 // Related Topics 哈希表 双指针 字符串 Sliding Window
 
 
-package com.yuhangma.leetcode.practice.doublepointer;
+package com.yuhangma.leetcode.practice.C_doublepointer;
 
 import java.util.HashSet;
 import java.util.Set;

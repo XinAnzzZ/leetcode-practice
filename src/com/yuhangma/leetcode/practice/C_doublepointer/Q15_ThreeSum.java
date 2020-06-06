@@ -18,7 +18,7 @@
 // Related Topics 数组 双指针
 
 
-package com.yuhangma.leetcode.practice.doublepointer;
+package com.yuhangma.leetcode.practice.C_doublepointer;
 
 import java.util.ArrayList;
 import java.util.Arrays;
