@@ -62,6 +62,7 @@ public class Q121_BestTimeToBuyAndSellStock {
                 }
                 if (maxProfit < price - minProfit) {
                     maxProfit = price - minProfit;
+
                 }
             }
             return maxProfit;
