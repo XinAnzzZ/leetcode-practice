@@ -20,7 +20,7 @@ import java.util.Arrays;
 
 /**
  * @author Moore.Ma
- * @since 2020/06/
+ * @since 2020/06/07
  */
 public class Q42_TrappingRainWater {
     public static void main(String[] args) {
