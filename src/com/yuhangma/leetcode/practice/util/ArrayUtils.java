@@ -9,7 +9,7 @@ import java.util.Random;
 public class ArrayUtils {
 
     /**
-     * 随机生成最大长度为 10，值在 0 - 10 之间的 int 数组
+     * 生成长度在 [0, 10] 区间，值在 [0, 10] 区间的随机数组
      *
      * @return 随机产生的数组
      */
@@ -18,19 +18,50 @@ public class ArrayUtils {
     }
 
     /**
-     * 随机生成最大长度为 {@code maxLength}，值在 0 - 10 之间的 int 数组
+     * 生成长度在 [0, {@code maxLength}] 区间，值在 [0, 10] 区间的随机数组
      *
      * @param maxLength 要生成的数组的最大长度
      * @return 随机产生的数组
      */
     public static int[] genRandomArr(int maxLength) {
+        return genRandomArr(0, maxLength, 0, 10);
+    }
+
+    /**
+     * 生成长度在 [0, 10] 区间，值在 [{@code minVal}, {@code maxVal}] 区间的随机数组
+     *
+     * @param minVal 数组元素最小值
+     * @param maxVal 数组元素最大值
+     * @return 随机数组
+     */
+    public static int[] genRandomArr(int minVal, int maxVal) {
+        return genRandomArr(0, 10, minVal, maxVal);
+    }
+
+    /**
+     * 生成长度在 [{@code minLength}, {@code maxLength}] 区间，值在 [{@code minVal}, {@code maxVal}] 区间的随机数组
+     *
+     * @param minLength 数组最小长度
+     * @param maxLength 数组最大长度
+     * @param minVal    数组元素最小值
+     * @param maxVal    数组元素最大值
+     * @return 随机数组
+     */
+    public static int[] genRandomArr(int minLength, int maxLength, int minVal, int maxVal) {
         Random random = new Random();
-        int length = random.nextInt(maxLength);
-        int[] res = new int[length];
-        for (int i = 0; i < length; i++) {
-            res[i] = random.nextInt(10);
+        int arrLength = -1;
+        while (arrLength < minLength) {
+            arrLength = random.nextInt(maxLength);
         }
-        return res;
+        int[] arr = new int[arrLength];
+        for (int i = 0; i < arrLength; i++) {
+            int temp = Integer.MIN_VALUE;
+            while (temp < minVal) {
+                temp = random.nextInt(maxVal);
+            }
+            arr[i] = temp;
+        }
+        return arr;
     }
 
     /**
