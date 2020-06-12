@@ -20,7 +20,7 @@
 // Related Topics 哈希表 数学
 
 
-package com.yuhangma.leetcode.practice.C_doublepointer;
+package com.yuhangma.leetcode.practice.D_fastslowpointer;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -29,15 +29,15 @@ import java.util.Set;
  * @author Moore.Ma
  * @since 2020/06/11
  */
-public class HappyNumber {
+public class Q202_HappyNumber {
     public static void main(String[] args) {
-        Solution solution = new HappyNumber().new Solution();
+        Solution solution = new Q202_HappyNumber().new Solution();
         System.out.println(solution.isHappy(20));
         testCase();
     }
 
     private static void testCase() {
-        Solution solution = new HappyNumber().new Solution();
+        Solution solution = new Q202_HappyNumber().new Solution();
     }
 
     /**
