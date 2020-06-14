@@ -39,7 +39,7 @@ import java.util.List;
 
 /**
  * @author Moore.Ma
- * @since 2020/06/
+ * @since 2020/06/13
  */
 public class Q6_ZigzagConversion {
     public static void main(String[] args) {
