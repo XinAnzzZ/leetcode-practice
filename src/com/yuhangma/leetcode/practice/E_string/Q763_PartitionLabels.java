@@ -23,7 +23,7 @@
 // Related Topics 贪心算法 双指针
 
 
-package com.yuhangma.leetcode.practice.D_string;
+package com.yuhangma.leetcode.practice.E_string;
 
 import java.util.ArrayList;
 import java.util.List;

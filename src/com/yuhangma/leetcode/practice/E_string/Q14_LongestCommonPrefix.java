@@ -21,7 +21,7 @@
 // Related Topics 字符串
 
 
-package com.yuhangma.leetcode.practice.D_string;
+package com.yuhangma.leetcode.practice.E_string;
 
 /**
  * @author Moore.Ma

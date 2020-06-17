@@ -24,7 +24,7 @@
 // Related Topics 数学
 
 
-package com.yuhangma.leetcode.practice.number;
+package com.yuhangma.leetcode.practice.F_number;
 
 /**
  * @author Moore.Ma
