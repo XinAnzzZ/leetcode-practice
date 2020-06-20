@@ -23,6 +23,8 @@
 
 package com.yuhangma.leetcode.practice.F_number;
 
+import java.util.Random;
+
 /**
  * @author Moore.Ma
  * @since 2020/06/19
@@ -30,30 +32,53 @@ package com.yuhangma.leetcode.practice.F_number;
 public class Q43_MultiplyStrings {
     public static void main(String[] args) {
         Solution solution = new Q43_MultiplyStrings().new Solution();
-        System.out.println(solution.multiply("12", "12"));
-        testCase();
+        System.out.println(solution.multiply("123", "456"));
+        // testCase();
     }
 
     private static void testCase() {
         Solution solution = new Q43_MultiplyStrings().new Solution();
+        Random random = new Random();
+        for (int i = 0; i < 100000; i++) {
+            int num1 = random.nextInt(100000);
+            int num2 = random.nextInt(100000);
+            int correct = num1 * num2;
+            int ans = Integer.parseInt(solution.multiply(String.valueOf(num1), String.valueOf(num2)));
+            if (correct != ans) {
+                System.out.println(num1 + "==" + num2);
+                System.out.println("correct=" + correct);
+                System.out.println("ans=" + ans);
+                throw new RuntimeException();
+            }
+        }
     }
 
     class Solution {
         public String multiply(String num1, String num2) {
+            if (num1.equals("0") || num2.equals("0")) {
+                return "0";
+            }
             char[] chars1 = num1.toCharArray();
             char[] chars2 = num2.toCharArray();
-            int sum = 0;
-            int adder = 0;
+            int sumLength = chars1.length + chars2.length;
+            int[] sumArr = new int[sumLength];
             for (int i = chars1.length - 1; i >= 0; i--) {
                 int x = chars1[i] - '0';
                 for (int j = chars2.length - 1; j >= 0; j--) {
                     int y = chars2[j] - '0';
-                    int temp = x * y + adder;
-                    sum = sum + (temp % 10) * (int) Math.pow(10, chars1.length - i - 1);
-                    adder = temp / 10;
+                    int temp = x * y + sumArr[i + j + 1];
+                    sumArr[i + j + 1] = temp % 10;
+                    sumArr[i + j] = sumArr[i + j] + temp / 10;
                 }
             }
-            return String.valueOf(sum);
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < sumArr.length; i++) {
+                if (i == 0 && sumArr[i] == 0) {
+                    continue;
+                }
+                sb.append(sumArr[i]);
+            }
+            return sb.toString();
         }
     }
 }
