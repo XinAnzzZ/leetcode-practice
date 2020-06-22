@@ -36,7 +36,10 @@ import java.util.List;
 public class Q54_SpiralMatrix {
     public static void main(String[] args) {
         Solution solution = new Q54_SpiralMatrix().new Solution();
-
+        int[][] arr = {{1, 2, 3, 4},
+                {5, 6, 7, 8},
+                {9, 10, 11, 12}};
+        System.out.println(solution.spiralOrder(arr));
         testCase();
     }
 
@@ -49,10 +52,34 @@ public class Q54_SpiralMatrix {
             if (matrix.length == 0) {
                 return new ArrayList<>();
             }
-            int m = matrix[0].length;
-            int n = matrix.length;
-
-            return null;
+            List<Integer> res = new ArrayList<>(matrix.length * matrix[0].length);
+            int top = 0, buttom = matrix.length - 1, left = 0, right = matrix[0].length - 1;
+            while (buttom >= top && right >= left) {
+                // 左到右
+                for (int i = left; i <= right; i++) {
+                    res.add(matrix[top][i]);
+                }
+                top++;
+                // 上到下
+                for (int i = top; i <= buttom; i++) {
+                    res.add(matrix[i][right]);
+                }
+                right--;
+                if (top > buttom || left > right) {
+                    break;
+                }
+                // 右到左
+                for (int i = right; i >= left; i--) {
+                    res.add(matrix[buttom][i]);
+                }
+                buttom--;
+                // 下到上
+                for (int i = buttom; i >= top; i--) {
+                    res.add(matrix[i][left]);
+                }
+                left++;
+            }
+            return res;
         }
     }
 
