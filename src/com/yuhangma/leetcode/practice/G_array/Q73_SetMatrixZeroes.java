@@ -43,6 +43,8 @@
 
 package com.yuhangma.leetcode.practice.G_array;
 
+import java.util.Arrays;
+
 /**
  * @author Moore.Ma
  * @since 2020/06/23
@@ -50,7 +52,11 @@ package com.yuhangma.leetcode.practice.G_array;
 public class Q73_SetMatrixZeroes {
     public static void main(String[] args) {
         Solution solution = new Q73_SetMatrixZeroes().new Solution();
-
+        int[][] arr = {{0, 1, 2, 0},
+                {3, 4, 5, 2},
+                {1, 3, 1, 5}};
+        solution.setZeroes(arr);
+        System.out.println(Arrays.deepToString(arr));
         testCase();
     }
 
@@ -60,7 +66,29 @@ public class Q73_SetMatrixZeroes {
 
     class Solution {
         public void setZeroes(int[][] matrix) {
-
+            if (matrix.length == 0) {
+                return;
+            }
+            boolean[][] arr = new boolean[matrix.length][matrix[0].length];
+            for (int i = 0; i < matrix.length; i++) {
+                for (int j = 0; j < matrix[i].length; j++) {
+                    if (matrix[i][j] == 0) {
+                        arr[i][j] = true;
+                    }
+                }
+            }
+            for (int i = 0; i < arr.length; i++) {
+                for (int j = 0; j < arr[0].length; j++) {
+                    if (arr[i][j]) {
+                        for (int k = 0; k < arr[0].length; k++) {
+                            matrix[i][k] = 0;
+                        }
+                        for (int k = 0; k < arr.length; k++) {
+                            matrix[k][j] = 0;
+                        }
+                    }
+                }
+            }
         }
     }
 
