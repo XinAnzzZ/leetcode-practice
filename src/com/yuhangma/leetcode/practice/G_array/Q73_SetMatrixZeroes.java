@@ -52,9 +52,7 @@ import java.util.Arrays;
 public class Q73_SetMatrixZeroes {
     public static void main(String[] args) {
         Solution solution = new Q73_SetMatrixZeroes().new Solution();
-        int[][] arr = {{0, 1, 2, 0},
-                {3, 4, 5, 2},
-                {1, 3, 1, 5}};
+        int[][] arr = {{0, 1, 2, 0}, {3, 4, 5, 2}, {1, 3, 1, 5}};
         solution.setZeroes(arr);
         System.out.println(Arrays.deepToString(arr));
         testCase();
