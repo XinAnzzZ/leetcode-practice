@@ -40,7 +40,7 @@
 // Related Topics 栈 字符串
 
 
-package com.yuhangma.leetcode.practice.G_array;
+package com.yuhangma.leetcode.practice.H_stack;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
