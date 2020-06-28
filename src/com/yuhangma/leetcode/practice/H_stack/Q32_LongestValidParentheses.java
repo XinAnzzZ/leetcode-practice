@@ -18,6 +18,8 @@
 
 package com.yuhangma.leetcode.practice.H_stack;
 
+import java.util.ArrayDeque;
+
 /**
  * @author Moore.Ma
  * @since 2020/06/28
@@ -25,6 +27,7 @@ package com.yuhangma.leetcode.practice.H_stack;
 public class Q32_LongestValidParentheses {
     public static void main(String[] args) {
         Solution solution = new Q32_LongestValidParentheses().new Solution();
+        System.out.println(solution.longestValidParentheses(")))"));
         testCase();
     }
 
@@ -34,7 +37,22 @@ public class Q32_LongestValidParentheses {
 
     class Solution {
         public int longestValidParentheses(String s) {
-            return 0;
+            ArrayDeque<Integer> stack = new ArrayDeque<>();
+            stack.push(-1);
+            int maxLength = 0;
+            for (int i = 0; i < s.length(); i++) {
+                if (s.charAt(i) == '(') {
+                    stack.push(i);
+                } else {
+                    stack.pop();
+                    if (stack.isEmpty()) {
+                        stack.push(i);
+                    } else {
+                        maxLength = Math.max(maxLength, i - stack.peek());
+                    }
+                }
+            }
+            return maxLength;
         }
     }
 
