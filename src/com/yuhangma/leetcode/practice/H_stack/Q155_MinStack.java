@@ -41,6 +41,8 @@
 
 package com.yuhangma.leetcode.practice.H_stack;
 
+import java.util.ArrayDeque;
+
 /**
  * @author Moore.Ma
  * @since 2020/06/
@@ -56,23 +58,41 @@ public class Q155_MinStack {
 
     class MinStack {
 
+        private ArrayDeque<Integer> stack;
+
+        private ArrayDeque<Integer> minStack;
+
         public MinStack() {
+            stack = new ArrayDeque<>();
+            minStack = new ArrayDeque<>();
         }
 
         public void push(int x) {
-
+            if (stack.isEmpty() || x <= minStack.peek()) {
+                minStack.push(x);
+            }
+            stack.push(x);
         }
 
         public void pop() {
-
+            Integer pop = stack.pop();
+            if (pop.equals(minStack.peek())) {
+                minStack.pop();
+            }
         }
 
         public int top() {
-            return 0;
+            if (stack.isEmpty()) {
+                throw new RuntimeException();
+            }
+            return stack.peek();
         }
 
         public int getMin() {
-            return 0;
+            if (stack.isEmpty()) {
+                throw new RuntimeException();
+            }
+            return minStack.peek();
         }
     }
 
