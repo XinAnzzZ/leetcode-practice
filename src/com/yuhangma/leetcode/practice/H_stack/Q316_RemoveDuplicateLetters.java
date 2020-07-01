@@ -22,9 +22,7 @@
 
 package com.yuhangma.leetcode.practice.H_stack;
 
-import java.util.ArrayDeque;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 /**
  * @author Moore.Ma
@@ -44,17 +42,26 @@ public class Q316_RemoveDuplicateLetters {
     class Solution {
         public String removeDuplicateLetters(String s) {
             ArrayDeque<Character> stack = new ArrayDeque<>(s.length());
+            Map<Character, Integer> lastOccurrence = new HashMap<>();
+            for (int i = 0; i < s.length(); i++) {
+                lastOccurrence.put(s.charAt(i), i);
+            }
+
             Set<Character> set = new HashSet<>();
-            for (int i = s.length() - 1; i >= 0; i--) {
+            for (int i = 0; i < s.length(); i++) {
                 char c = s.charAt(i);
                 if (!set.contains(c)) {
-                    set.add(c);
+                    while (!stack.isEmpty() && c < stack.peek() && lastOccurrence.get(stack.peek()) > i) {
+                        Character pop = stack.pop();
+                        set.remove(pop);
+                    }
                     stack.push(c);
+                    set.add(c);
                 }
             }
             StringBuilder sb = new StringBuilder();
             while (!stack.isEmpty()) {
-                sb.append(stack.pop());
+                sb.append(stack.pollLast());
             }
             return sb.toString();
         }
