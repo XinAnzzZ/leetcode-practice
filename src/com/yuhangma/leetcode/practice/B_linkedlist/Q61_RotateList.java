@@ -11,7 +11,7 @@
 
 package com.yuhangma.leetcode.practice.B_linkedlist;
 
-import com.yuhangma.leetcode.practice.B_linkedlist.base.ListNode;
+import com.yuhangma.leetcode.practice.base.ListNode;
 
 /**
  * @author Moore.Ma

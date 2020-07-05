@@ -1,4 +1,4 @@
-package com.yuhangma.leetcode.practice.B_linkedlist.base;
+package com.yuhangma.leetcode.practice.base;
 
 public class ListNode {
     public int val;

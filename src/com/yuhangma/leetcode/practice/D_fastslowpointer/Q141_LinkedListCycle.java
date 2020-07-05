@@ -41,7 +41,7 @@
 
 package com.yuhangma.leetcode.practice.D_fastslowpointer;
 
-import com.yuhangma.leetcode.practice.B_linkedlist.base.ListNode;
+import com.yuhangma.leetcode.practice.base.ListNode;
 
 /**
  * @author Moore.Ma
