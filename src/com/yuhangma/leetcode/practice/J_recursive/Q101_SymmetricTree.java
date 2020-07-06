@@ -30,17 +30,17 @@
 // Related Topics 树 深度优先搜索 广度优先搜索
 
 
-package com.yuhangma.leetcode.practice.leetcode.editor.cn;
+package com.yuhangma.leetcode.practice.J_recursive;
 
 import com.yuhangma.leetcode.practice.base.TreeNode;
 
 /**
  * @author Moore.Ma
- * @since 2020/07/
+ * @since 2020/07/05
  */
-public class SymmetricTree {
+public class Q101_SymmetricTree {
     public static void main(String[] args) {
-        Solution solution = new SymmetricTree().new Solution();
+        Solution solution = new Q101_SymmetricTree().new Solution();
         TreeNode treeNode = new TreeNode(1,
                 new TreeNode(2,
                         null, new TreeNode(3)), new TreeNode(2,
@@ -50,7 +50,7 @@ public class SymmetricTree {
     }
 
     private static void testCase() {
-        Solution solution = new SymmetricTree().new Solution();
+        Solution solution = new Q101_SymmetricTree().new Solution();
     }
 
     class Solution {
