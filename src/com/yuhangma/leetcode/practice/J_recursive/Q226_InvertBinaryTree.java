@@ -36,6 +36,11 @@ import com.yuhangma.leetcode.practice.base.TreeNode;
 public class Q226_InvertBinaryTree {
     public static void main(String[] args) {
         Solution solution = new Q226_InvertBinaryTree().new Solution();
+        TreeNode treeNode = new TreeNode(4,
+                new TreeNode(2,
+                        new TreeNode(1), new TreeNode(3)), new TreeNode(7,
+                new TreeNode(6), new TreeNode(9)));
+        System.out.println(solution.invertTree(treeNode));
         testCase();
     }
 
@@ -45,7 +50,14 @@ public class Q226_InvertBinaryTree {
 
     class Solution {
         public TreeNode invertTree(TreeNode root) {
-            return null;
+            if (root == null) {
+                return null;
+            }
+            TreeNode right = root.right;
+            TreeNode left = root.left;
+            root.left = invertTree(right);
+            root.right = invertTree(left);
+            return root;
         }
     }
 
