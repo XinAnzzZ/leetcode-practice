@@ -53,8 +53,32 @@ public class Q236_LowestCommonAncestorOfABinaryTree {
     }
 
     class Solution {
+
+        private TreeNode res;
+
         public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-            return null;
+            exist(root, p, q);
+            return res;
+        }
+
+        /**
+         * 以 node 节点为根的树中是否包含 p 节点或者 q 节点
+         *
+         * @return {@code true} if the p node or the q node exist in the {@code node}
+         */
+        private boolean exist(TreeNode node, TreeNode p, TreeNode q) {
+            if (node == null) {
+                return false;
+            }
+            boolean existInLeft = exist(node.left, p, q);
+            boolean existInRight = exist(node.right, p, q);
+            if ((existInLeft && existInRight)
+                    || (existInLeft && (node.val == p.val || node.val == q.val))
+                    || (existInRight && (node.val == p.val || node.val == q.val))) {
+                res = node;
+            }
+
+            return existInLeft || existInRight || node.val == p.val || node.val == q.val;
         }
     }
 
