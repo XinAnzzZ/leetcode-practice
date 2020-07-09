@@ -16,6 +16,9 @@ package com.yuhangma.leetcode.practice.K_DividAndConquer;
 
 import com.yuhangma.leetcode.practice.base.ListNode;
 
+import java.util.Comparator;
+import java.util.PriorityQueue;
+
 /**
  * @author Moore.Ma
  * @since 2020/07/09
@@ -23,6 +26,11 @@ import com.yuhangma.leetcode.practice.base.ListNode;
 public class Q23_MergeKSortedLists {
     public static void main(String[] args) {
         Solution solution = new Q23_MergeKSortedLists().new Solution();
+        ListNode node1 = new ListNode(1, new ListNode(4, new ListNode(5)));
+        ListNode node2 = new ListNode(1, new ListNode(3, new ListNode(4)));
+        ListNode node3 = new ListNode(2, new ListNode(6));
+        ListNode[] nodes = {node1, node2, node3};
+        System.out.println(solution.mergeKLists(nodes));
         testCase();
     }
 
@@ -32,7 +40,28 @@ public class Q23_MergeKSortedLists {
 
     class Solution {
         public ListNode mergeKLists(ListNode[] lists) {
-            return null;
+            if (lists == null) {
+                return null;
+            }
+            PriorityQueue<ListNode> queue = new PriorityQueue<>(Comparator.comparingInt(a -> a.val));
+            for (ListNode node : lists) {
+                if (node != null) {
+                    queue.add(node);
+                }
+            }
+
+            ListNode node = new ListNode(0);
+            ListNode cur = node;
+            while (!queue.isEmpty()) {
+                ListNode minNode = queue.poll();
+                cur.next = minNode;
+                cur = cur.next;
+                minNode = minNode.next;
+                if (minNode != null) {
+                    queue.add(minNode);
+                }
+            }
+            return node.next;
         }
     }
 
