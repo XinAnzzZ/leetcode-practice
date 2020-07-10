@@ -30,6 +30,8 @@ package com.yuhangma.leetcode.practice.K_DividAndConquer;
 public class Q33_SearchInRotatedSortedArray {
     public static void main(String[] args) {
         Solution solution = new Q33_SearchInRotatedSortedArray().new Solution();
+        int[] arr = {4, 5, 6, 7, 8, 0, 1, 2};
+        System.out.println(solution.search(arr, 3));
         testCase();
     }
 
@@ -39,7 +41,45 @@ public class Q33_SearchInRotatedSortedArray {
 
     class Solution {
         public int search(int[] nums, int target) {
-            return 0;
+            // 二分法找到数组中元素的最大值的索引
+            int maxValueIndex = getMaxValueIndex(nums, 0, nums.length - 1);
+            // 从 0 开始到最大值所在的索引位置之间进行二分搜索
+            int i = binarySearch(nums, 0, maxValueIndex, target);
+            if (i != -1) {
+                return i;
+            }
+            // 从最大值索引 + 1 位置开始到数组末尾进行二分搜索
+            int j = binarySearch(nums, maxValueIndex + 1, nums.length - 1, target);
+            if (j != -1) {
+                return j;
+            }
+            return -1;
+        }
+
+        private int getMaxValueIndex(int[] nums, int start, int end) {
+            if (start == end) {
+                return start;
+            }
+            int mid = start + (end - start) / 2;
+            if (nums[mid] < nums[0]) {
+                return getMaxValueIndex(nums, start, mid - 1);
+            } else {
+                return getMaxValueIndex(nums, mid + 1, end);
+            }
+        }
+
+        private int binarySearch(int[] nums, int start, int end, int target) {
+            if (start == end) {
+                return -1;
+            }
+            int mid = start + (end - start) / 2;
+            if (nums[mid] > target) {
+                return binarySearch(nums, start, mid - 1, target);
+            } else if (nums[mid] < target) {
+                return binarySearch(nums, mid + 1, end, target);
+            } else {
+                return mid;
+            }
         }
     }
 
