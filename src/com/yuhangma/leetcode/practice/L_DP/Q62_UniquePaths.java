@@ -43,15 +43,15 @@ package com.yuhangma.leetcode.practice.L_DP;
  * @author Moore.Ma
  * @since 2020/07/15
  */
-public class UniquePaths {
+public class Q62_UniquePaths {
     public static void main(String[] args) {
-        Solution solution = new UniquePaths().new Solution();
+        Solution solution = new Q62_UniquePaths().new Solution();
         System.out.println(solution.uniquePaths(7, 3));
         testCase();
     }
 
     private static void testCase() {
-        Solution solution = new UniquePaths().new Solution();
+        Solution solution = new Q62_UniquePaths().new Solution();
     }
 
     class Solution {
