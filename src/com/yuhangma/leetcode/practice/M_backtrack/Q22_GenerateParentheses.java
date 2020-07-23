@@ -18,6 +18,7 @@
 
 package com.yuhangma.leetcode.practice.M_backtrack;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -27,6 +28,7 @@ import java.util.List;
 public class Q22_GenerateParentheses {
     public static void main(String[] args) {
         Solution solution = new Q22_GenerateParentheses().new Solution();
+        System.out.println(solution.generateParenthesis(4));
         testCase();
     }
 
@@ -36,7 +38,28 @@ public class Q22_GenerateParentheses {
 
     class Solution {
         public List<String> generateParenthesis(int n) {
-            return null;
+            List<String> res = new ArrayList<>();
+            dfs("", n, n, res);
+            return res;
+        }
+
+        private void dfs(String curStr, int left, int right, List<String> res) {
+            if (left == 0 && right == 0) {
+                res.add(curStr);
+                return;
+            }
+
+            if (left > right) {
+                return;
+            }
+
+            if (left > 0) {
+                dfs(curStr + "(", left - 1, right, res);
+            }
+
+            if (right > 0) {
+                dfs(curStr + ")", left, right - 1, res);
+            }
         }
     }
 
