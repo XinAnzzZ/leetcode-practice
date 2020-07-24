@@ -34,7 +34,7 @@
 
 package com.yuhangma.leetcode.practice.M_backtrack;
 
-import java.util.List;
+import java.util.*;
 
 /**
  * @author Moore.Ma
@@ -52,7 +52,36 @@ public class Q40_CombinationSumIi {
 
     class Solution {
         public List<List<Integer>> combinationSum2(int[] candidates, int target) {
-            return null;
+            ArrayList<List<Integer>> res = new ArrayList<>();
+            Arrays.sort(candidates);
+            dfs(candidates, 0, target, new ArrayDeque<>(), res);
+            return res;
+        }
+
+        /**
+         * @param candidates 候选数组
+         * @param begin      起始位置
+         * @param residue    剩余
+         * @param path       路径
+         * @param res        结果集
+         */
+        private void dfs(int[] candidates, int begin, int residue, Deque<Integer> path, List<List<Integer>> res) {
+            if (residue == 0) {
+                res.add(new ArrayList<>(path));
+                return;
+            }
+            for (int i = begin; i < candidates.length; i++) {
+                if (residue - candidates[i] < 0) {
+                    break;
+                }
+                if (i > begin && candidates[i] == candidates[i - 1]) {
+                    continue;
+                }
+
+                path.addLast(candidates[i]);
+                dfs(candidates, i + 1, residue - candidates[i], path, res);
+                path.removeLast();
+            }
         }
     }
 
