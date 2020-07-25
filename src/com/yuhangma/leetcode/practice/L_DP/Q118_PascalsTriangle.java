@@ -39,6 +39,7 @@ public class Q118_PascalsTriangle {
     }
 
     class Solution {
+
         public List<List<Integer>> generate(int numRows) {
             List<List<Integer>> res = new ArrayList<>();
             if (numRows == 0) {
