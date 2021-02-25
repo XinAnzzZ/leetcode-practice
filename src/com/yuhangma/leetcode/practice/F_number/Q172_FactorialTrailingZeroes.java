@@ -24,16 +24,16 @@ package com.yuhangma.leetcode.practice.F_number;
  */
 public class Q172_FactorialTrailingZeroes {
     public static void main(String[] args) {
-        Solution solution = new Q172_FactorialTrailingZeroes().new Solution();
+        Solution solution = new Solution();
         System.out.println(solution.trailingZeroes(6));
         testCase();
     }
 
     private static void testCase() {
-        Solution solution = new Q172_FactorialTrailingZeroes().new Solution();
+        Solution solution = new Solution();
     }
 
-    class Solution {
+    static class Solution {
         public int trailingZeroes(int n) {
             return n == 0 ? 0 : n / 5 + trailingZeroes(n / 5);
         }

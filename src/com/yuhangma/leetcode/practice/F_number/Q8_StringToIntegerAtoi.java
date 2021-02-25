@@ -68,16 +68,16 @@ package com.yuhangma.leetcode.practice.F_number;
  */
 public class Q8_StringToIntegerAtoi {
     public static void main(String[] args) {
-        Solution solution = new Q8_StringToIntegerAtoi().new Solution();
+        Solution solution = new Solution();
         System.out.println(solution.myAtoi("  -0012a42"));
         testCase();
     }
 
     private static void testCase() {
-        Solution solution = new Q8_StringToIntegerAtoi().new Solution();
+        Solution solution = new Solution();
     }
 
-    class Solution {
+    static class Solution {
         public int myAtoi(String str) {
             // 去掉前面的空格
             char[] chars = str.toCharArray();

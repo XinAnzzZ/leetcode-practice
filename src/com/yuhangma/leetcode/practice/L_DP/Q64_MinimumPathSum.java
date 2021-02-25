@@ -24,7 +24,7 @@ package com.yuhangma.leetcode.practice.L_DP;
  */
 public class Q64_MinimumPathSum {
     public static void main(String[] args) {
-        Solution solution = new Q64_MinimumPathSum().new Solution();
+        Solution solution = new Solution();
         int[] arr1 = {1, 3, 1};
         int[] arr2 = {1, 5, 1};
         int[] arr3 = {4, 2, 1};
@@ -34,10 +34,10 @@ public class Q64_MinimumPathSum {
     }
 
     private static void testCase() {
-        Solution solution = new Q64_MinimumPathSum().new Solution();
+        Solution solution = new Solution();
     }
 
-    class Solution {
+    static class Solution {
         public int minPathSum(int[][] grid) {
             if (grid == null || grid[0] == null) {
                 return 0;

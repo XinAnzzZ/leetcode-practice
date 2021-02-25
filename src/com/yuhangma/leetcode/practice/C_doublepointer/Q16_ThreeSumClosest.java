@@ -32,13 +32,13 @@ import java.util.Arrays;
  */
 public class Q16_ThreeSumClosest {
     public static void main(String[] args) {
-        Solution solution = new Q16_ThreeSumClosest().new Solution();
+        Solution solution = new Solution();
         int[] arr = {-1, 2, 1, -4};
         int target = 1;
         System.out.println(solution.threeSumClosest(arr, target));
     }
 
-    class Solution {
+    static class Solution {
         public int threeSumClosest(int[] nums, int target) {
             Arrays.sort(nums);
 

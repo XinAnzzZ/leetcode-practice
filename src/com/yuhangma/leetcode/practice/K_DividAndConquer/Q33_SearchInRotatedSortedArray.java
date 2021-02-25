@@ -29,17 +29,17 @@ package com.yuhangma.leetcode.practice.K_DividAndConquer;
  */
 public class Q33_SearchInRotatedSortedArray {
     public static void main(String[] args) {
-        Solution solution = new Q33_SearchInRotatedSortedArray().new Solution();
+        Solution solution = new Solution();
         int[] arr = {4, 5, 6, 7, 8, 0, 1, 2};
         System.out.println(solution.search(arr, 0));
         testCase();
     }
 
     private static void testCase() {
-        Solution solution = new Q33_SearchInRotatedSortedArray().new Solution();
+        Solution solution = new Solution();
     }
 
-    class Solution {
+    static class Solution {
         public int search(int[] nums, int target) {
             if (nums == null || nums.length == 0) {
                 return -1;

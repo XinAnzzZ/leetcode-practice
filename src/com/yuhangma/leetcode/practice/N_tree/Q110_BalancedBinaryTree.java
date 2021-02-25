@@ -47,15 +47,15 @@ import com.yuhangma.leetcode.practice.base.TreeNode;
  */
 public class Q110_BalancedBinaryTree {
     public static void main(String[] args) {
-        Solution solution = new Q110_BalancedBinaryTree().new Solution();
+        Solution solution = new Solution();
         testCase();
     }
 
     private static void testCase() {
-        Solution solution = new Q110_BalancedBinaryTree().new Solution();
+        Solution solution = new Solution();
     }
 
-    class Solution {
+    static class Solution {
         public boolean isBalanced(TreeNode root) {
             return false;
         }

@@ -20,16 +20,16 @@ package com.yuhangma.leetcode.practice.F_number;
  */
 public class Q258_AddDigits {
     public static void main(String[] args) {
-        Solution solution = new Q258_AddDigits().new Solution();
+        Solution solution = new Solution();
         solution.addDigits(123);
         testCase();
     }
 
     private static void testCase() {
-        Solution solution = new Q258_AddDigits().new Solution();
+        Solution solution = new Solution();
     }
 
-    class Solution {
+    static class Solution {
         public int addDigits(int num) {
             return (num - 1) % 9 + 1;
         }

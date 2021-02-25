@@ -41,10 +41,10 @@ public class Q138_copyListWithRandomPointer {
         one.random = seven;
 
         System.out.println(seven);
-        System.out.println(new Q138_copyListWithRandomPointer().new Solution().copyRandomList(seven));
+        System.out.println(new Solution().copyRandomList(seven));
     }
 
-    class Solution {
+    static class Solution {
 
         // key 是原链表的 node，value 是 copied 的新的 node
         Map<Node, Node> visitedMap = new HashMap<>();

@@ -23,16 +23,16 @@ package com.yuhangma.leetcode.practice.L_DP;
  */
 public class Q5_LongestPalindromicSubstring {
     public static void main(String[] args) {
-        Solution solution = new Q5_LongestPalindromicSubstring().new Solution();
+        Solution solution = new Solution();
         System.out.println(solution.longestPalindrome("aaabaaaa"));
         testCase();
     }
 
     private static void testCase() {
-        Solution solution = new Q5_LongestPalindromicSubstring().new Solution();
+        Solution solution = new Solution();
     }
 
-    class Solution {
+    static class Solution {
         public String longestPalindrome(String s) {
             if (s == null || s.length() < 2) {
                 return s;

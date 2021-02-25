@@ -25,7 +25,7 @@ import java.util.PriorityQueue;
  */
 public class Q23_MergeKSortedLists {
     public static void main(String[] args) {
-        Solution solution = new Q23_MergeKSortedLists().new Solution();
+        Solution solution = new Solution();
         ListNode node1 = new ListNode(1, new ListNode(4, new ListNode(5)));
         ListNode node2 = new ListNode(1, new ListNode(3, new ListNode(4)));
         ListNode node3 = new ListNode(2, new ListNode(6));
@@ -35,10 +35,10 @@ public class Q23_MergeKSortedLists {
     }
 
     private static void testCase() {
-        Solution solution = new Q23_MergeKSortedLists().new Solution();
+        Solution solution = new Solution();
     }
 
-    class Solution {
+    static class Solution {
         public ListNode mergeKLists(ListNode[] lists) {
             if (lists == null) {
                 return null;

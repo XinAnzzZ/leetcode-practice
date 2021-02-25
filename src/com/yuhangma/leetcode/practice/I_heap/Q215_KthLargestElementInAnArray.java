@@ -28,17 +28,17 @@ import java.util.PriorityQueue;
  */
 public class Q215_KthLargestElementInAnArray {
     public static void main(String[] args) {
-        Solution solution = new Q215_KthLargestElementInAnArray().new Solution();
+        Solution solution = new Solution();
         int[] arr = {3, 2, 3, 1, 2, 4, 5, 5, 6};
         System.out.println(solution.findKthLargest(arr, 4));
         testCase();
     }
 
     private static void testCase() {
-        Solution solution = new Q215_KthLargestElementInAnArray().new Solution();
+        Solution solution = new Solution();
     }
 
-    class Solution {
+    static class Solution {
         public int findKthLargest(int[] nums, int k) {
             PriorityQueue<Integer> queue = new PriorityQueue<>(k, Comparator.comparingInt(a -> a));
             for (int num : nums) {

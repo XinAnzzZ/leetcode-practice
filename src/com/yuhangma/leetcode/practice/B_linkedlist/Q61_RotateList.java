@@ -19,7 +19,7 @@ import com.yuhangma.leetcode.practice.base.ListNode;
  */
 public class Q61_RotateList {
     public static void main(String[] args) {
-        Solution2 solution = new Q61_RotateList().new Solution2();
+        Solution2 solution = new Solution2();
         ListNode listNode = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5, new ListNode(6))))));
         System.out.println(solution.rotateRight(listNode, 7));
     }
@@ -27,7 +27,7 @@ public class Q61_RotateList {
     /**
      * 自己写的
      */
-    class Solution {
+    static class Solution {
         public ListNode rotateRight(ListNode head, int k) {
             if (head == null) {
                 return null;
@@ -75,7 +75,7 @@ public class Q61_RotateList {
      * 此方法和我写的复杂度是差不多的，但是思路会更清晰，并且代码更优雅。
      */
     @SuppressWarnings("unused")
-    class Solution2 {
+    static class Solution2 {
         public ListNode rotateRight(ListNode head, int k) {
             if (head == null) {
                 return null;

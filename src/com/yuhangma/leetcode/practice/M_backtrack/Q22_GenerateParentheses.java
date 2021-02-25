@@ -27,16 +27,16 @@ import java.util.List;
  */
 public class Q22_GenerateParentheses {
     public static void main(String[] args) {
-        Solution solution = new Q22_GenerateParentheses().new Solution();
+        Solution solution = new Solution();
         System.out.println(solution.generateParenthesis(4));
         testCase();
     }
 
     private static void testCase() {
-        Solution solution = new Q22_GenerateParentheses().new Solution();
+        Solution solution = new Solution();
     }
 
-    class Solution {
+    static class Solution {
         public List<String> generateParenthesis(int n) {
             List<String> res = new ArrayList<>();
             dfs("", n, n, res);

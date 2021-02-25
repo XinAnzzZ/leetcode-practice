@@ -9,10 +9,10 @@ import java.util.ArrayDeque;
 public class Q224_BasicCalculator {
 
     public static void main(String[] args) {
-        Solution solution = new Q224_BasicCalculator().new Solution();
+        Solution solution = new Solution();
     }
 
-    class Solution {
+    static class Solution {
 
         public int evaluateExpr(ArrayDeque<Object> stack) {
             int res = 0;

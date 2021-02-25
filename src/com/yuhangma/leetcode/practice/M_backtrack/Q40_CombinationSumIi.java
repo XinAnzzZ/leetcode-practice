@@ -42,15 +42,15 @@ import java.util.*;
  */
 public class Q40_CombinationSumIi {
     public static void main(String[] args) {
-        Solution solution = new Q40_CombinationSumIi().new Solution();
+        Solution solution = new Solution();
         testCase();
     }
 
     private static void testCase() {
-        Solution solution = new Q40_CombinationSumIi().new Solution();
+        Solution solution = new Solution();
     }
 
-    class Solution {
+    static class Solution {
         public List<List<Integer>> combinationSum2(int[] candidates, int target) {
             ArrayList<List<Integer>> res = new ArrayList<>();
             Arrays.sort(candidates);

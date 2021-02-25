@@ -35,19 +35,19 @@ import java.util.List;
  */
 public class Q54_SpiralMatrix {
     public static void main(String[] args) {
-        Solution solution = new Q54_SpiralMatrix().new Solution();
+        Solution solution = new Solution();
         int[][] arr = {{1, 2, 3, 4},
-                {5, 6, 7, 8},
-                {9, 10, 11, 12}};
+            {5, 6, 7, 8},
+            {9, 10, 11, 12}};
         System.out.println(solution.spiralOrder(arr));
         testCase();
     }
 
     private static void testCase() {
-        Solution solution = new Q54_SpiralMatrix().new Solution();
+        Solution solution = new Solution();
     }
 
-    class Solution {
+    static class Solution {
         public List<Integer> spiralOrder(int[][] matrix) {
             if (matrix.length == 0) {
                 return new ArrayList<>();

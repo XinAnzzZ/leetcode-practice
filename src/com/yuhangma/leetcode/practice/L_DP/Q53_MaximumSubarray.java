@@ -21,17 +21,17 @@ package com.yuhangma.leetcode.practice.L_DP;
  */
 public class Q53_MaximumSubarray {
     public static void main(String[] args) {
-        Solution solution = new Q53_MaximumSubarray().new Solution();
+        Solution solution = new Solution();
         int[] arr = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
         System.out.println(solution.maxSubArray(arr));
         testCase();
     }
 
     private static void testCase() {
-        Solution solution = new Q53_MaximumSubarray().new Solution();
+        Solution solution = new Solution();
     }
 
-    class Solution {
+    static class Solution {
         public int maxSubArray(int[] nums) {
             int lastMax = nums[0];
             int max = lastMax;

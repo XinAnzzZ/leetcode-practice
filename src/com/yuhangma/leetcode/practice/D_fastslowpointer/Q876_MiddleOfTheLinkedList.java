@@ -41,16 +41,16 @@ import com.yuhangma.leetcode.practice.base.ListNode;
  */
 public class Q876_MiddleOfTheLinkedList {
     public static void main(String[] args) {
-        Solution solution = new Q876_MiddleOfTheLinkedList().new Solution();
+        Solution solution = new Solution();
         System.out.println(solution.middleNode(new ListNode(1)));
         testCase();
     }
 
     private static void testCase() {
-        Solution solution = new Q876_MiddleOfTheLinkedList().new Solution();
+        Solution solution = new Solution();
     }
 
-    class Solution {
+    static class Solution {
         public ListNode middleNode(ListNode head) {
             if (head.next == null) {
                 return head;

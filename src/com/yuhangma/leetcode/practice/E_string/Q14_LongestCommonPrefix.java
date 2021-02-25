@@ -29,17 +29,17 @@ package com.yuhangma.leetcode.practice.E_string;
  */
 public class Q14_LongestCommonPrefix {
     public static void main(String[] args) {
-        Solution solution = new Q14_LongestCommonPrefix().new Solution();
+        Solution solution = new Solution();
         String[] arr = {"flower", "flow", "flight"};
         System.out.println(solution.longestCommonPrefix(arr));
         testCase();
     }
 
     private static void testCase() {
-        Solution solution = new Q14_LongestCommonPrefix().new Solution();
+        Solution solution = new Solution();
     }
 
-    class Solution {
+    static class Solution {
         public String longestCommonPrefix(String[] strs) {
             if (strs.length == 0) {
                 return "";

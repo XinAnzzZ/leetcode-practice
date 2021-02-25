@@ -30,16 +30,16 @@ import java.util.*;
  */
 public class Q316_RemoveDuplicateLetters {
     public static void main(String[] args) {
-        Solution solution = new Q316_RemoveDuplicateLetters().new Solution();
+        Solution solution = new Solution();
         System.out.println(solution.removeDuplicateLetters("cbacdcbc"));
         testCase();
     }
 
     private static void testCase() {
-        Solution solution = new Q316_RemoveDuplicateLetters().new Solution();
+        Solution solution = new Solution();
     }
 
-    class Solution {
+    static class Solution {
         public String removeDuplicateLetters(String s) {
             ArrayDeque<Character> stack = new ArrayDeque<>(s.length());
             Map<Character, Integer> lastOccurrence = new HashMap<>();

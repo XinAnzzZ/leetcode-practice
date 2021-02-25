@@ -35,11 +35,11 @@ import java.util.Set;
  */
 public class Q3_LongestSubstringWithoutRepeatingCharacters {
     public static void main(String[] args) {
-        Solution solution = new Q3_LongestSubstringWithoutRepeatingCharacters().new Solution();
+        Solution solution = new Solution();
         System.out.println(solution.lengthOfLongestSubstring("a"));
     }
 
-    class Solution {
+    static class Solution {
         public int lengthOfLongestSubstring(String s) {
             char[] chars = s.toCharArray();
             // 最大长度

@@ -26,7 +26,7 @@ package com.yuhangma.leetcode.practice.C_doublepointer;
  */
 public class Q11_ContainerWithMostWater {
     public static void main(String[] args) {
-        Solution2 solution = new Q11_ContainerWithMostWater().new Solution2();
+        Solution2 solution = new Solution2();
         int[] arr = {1, 8, 6, 2, 5, 4, 8, 3, 7};
         System.out.println(solution.maxArea(arr));
     }
@@ -34,7 +34,7 @@ public class Q11_ContainerWithMostWater {
     /**
      * 解题思路：双指针，扫一遍，面积 = (firstPointer - lastPointer) * min(arr[firstPointer], arr[lastPointer])
      */
-    class Solution {
+    static class Solution {
         public int maxArea(int[] height) {
             int max = 0;
 
@@ -52,7 +52,7 @@ public class Q11_ContainerWithMostWater {
     /**
      * 官方解题思路：双指针，分别指向第一个位置 (arr[0]) 和最后一个位置 (arr[n])，每次移动 min(arr[left], arr[right]).
      */
-    class Solution2 {
+    static class Solution2 {
         public int maxArea(int[] height) {
             int max = 0;
 

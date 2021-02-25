@@ -35,15 +35,15 @@ import java.util.List;
  */
 public class Q102_BinaryTreeLevelOrderTraversal {
     public static void main(String[] args) {
-        Solution solution = new Q102_BinaryTreeLevelOrderTraversal().new Solution();
+        Solution solution = new Solution();
         testCase();
     }
 
     private static void testCase() {
-        Solution solution = new Q102_BinaryTreeLevelOrderTraversal().new Solution();
+        Solution solution = new Solution();
     }
 
-    class Solution {
+    static class Solution {
         public List<List<Integer>> levelOrder(TreeNode root) {
             return null;
         }

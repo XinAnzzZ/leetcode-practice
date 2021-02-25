@@ -32,16 +32,16 @@ package com.yuhangma.leetcode.practice.L_DP;
  */
 public class Q70_ClimbingStairs {
     public static void main(String[] args) {
-        Solution solution = new Q70_ClimbingStairs().new Solution();
+        Solution solution = new Solution();
         System.out.println(solution.climbStairs(5));
         testCase();
     }
 
     private static void testCase() {
-        Solution solution = new Q70_ClimbingStairs().new Solution();
+        Solution solution = new Solution();
     }
 
-    class Solution {
+    static class Solution {
         public int climbStairs(int n) {
             if (n <= 0) {
                 return 0;

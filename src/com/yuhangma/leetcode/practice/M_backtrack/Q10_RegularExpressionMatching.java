@@ -66,15 +66,15 @@ package com.yuhangma.leetcode.practice.M_backtrack;
  */
 public class Q10_RegularExpressionMatching {
     public static void main(String[] args) {
-        Solution solution = new Q10_RegularExpressionMatching().new Solution();
+        Solution solution = new Solution();
         testCase();
     }
 
     private static void testCase() {
-        Solution solution = new Q10_RegularExpressionMatching().new Solution();
+        Solution solution = new Solution();
     }
 
-    class Solution {
+    static class Solution {
         public boolean isMatch(String s, String p) {
             int m = s.length();
             int n = p.length();

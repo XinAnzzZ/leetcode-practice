@@ -53,15 +53,15 @@ import com.yuhangma.leetcode.practice.base.TreeNode;
  */
 public class Q450_DeleteNodeInABst {
     public static void main(String[] args) {
-        Solution solution = new Q450_DeleteNodeInABst().new Solution();
+        Solution solution = new Solution();
         testCase();
     }
 
     private static void testCase() {
-        Solution solution = new Q450_DeleteNodeInABst().new Solution();
+        Solution solution = new Solution();
     }
 
-    class Solution {
+    static class Solution {
         public TreeNode deleteNode(TreeNode root, int key) {
             return null;
         }

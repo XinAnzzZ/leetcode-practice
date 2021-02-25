@@ -36,17 +36,17 @@ import java.util.*;
  */
 public class Q347_TopKFrequentElements {
     public static void main(String[] args) {
-        Solution solution = new Q347_TopKFrequentElements().new Solution();
+        Solution solution = new Solution();
         int[] arr = {4, 1, -1, 2, -1, 2, 3};
         System.out.println(Arrays.toString(solution.topKFrequent(arr, 2)));
         testCase();
     }
 
     private static void testCase() {
-        Solution solution = new Q347_TopKFrequentElements().new Solution();
+        Solution solution = new Solution();
     }
 
-    class Solution {
+    static class Solution {
         public int[] topKFrequent(int[] nums, int k) {
             // 统计频率
             Map<Integer, Integer> frequencyMap = new HashMap<>();

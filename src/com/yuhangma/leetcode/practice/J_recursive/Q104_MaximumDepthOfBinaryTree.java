@@ -27,20 +27,20 @@ import com.yuhangma.leetcode.practice.base.TreeNode;
  */
 public class Q104_MaximumDepthOfBinaryTree {
     public static void main(String[] args) {
-        Solution solution = new Q104_MaximumDepthOfBinaryTree().new Solution();
+        Solution solution = new Solution();
         TreeNode treeNode = new TreeNode(1,
-                new TreeNode(2,
-                        null, new TreeNode(3)), new TreeNode(2,
-                null, new TreeNode(3)));
+            new TreeNode(2,
+                null, new TreeNode(3)), new TreeNode(2,
+            null, new TreeNode(3)));
         System.out.println(solution.maxDepth(treeNode));
         testCase();
     }
 
     private static void testCase() {
-        Solution solution = new Q104_MaximumDepthOfBinaryTree().new Solution();
+        Solution solution = new Solution();
     }
 
-    class Solution {
+    static class Solution {
         public int maxDepth(TreeNode root) {
             if (root == null) {
                 return 0;

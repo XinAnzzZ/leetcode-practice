@@ -25,15 +25,15 @@ import java.util.List;
  */
 public class Q46_Permutations {
     public static void main(String[] args) {
-        Solution solution = new Q46_Permutations().new Solution();
+        Solution solution = new Solution();
         testCase();
     }
 
     private static void testCase() {
-        Solution solution = new Q46_Permutations().new Solution();
+        Solution solution = new Solution();
     }
 
-    class Solution {
+    static class Solution {
         public List<List<Integer>> permute(int[] nums) {
             return null;
         }

@@ -55,7 +55,7 @@ import java.util.Arrays;
  */
 public class Q26_RemoveDuplicatesFromSortedArray {
     public static void main(String[] args) {
-        Solution solution = new Q26_RemoveDuplicatesFromSortedArray().new Solution();
+        Solution solution = new Solution();
         int[] arr = {0, 1, 2, 5, 7, 8, 8, 8};
         int length = solution.removeDuplicates(arr);
         for (int i = 0; i < length; i++) {
@@ -65,7 +65,7 @@ public class Q26_RemoveDuplicatesFromSortedArray {
         testCase();
     }
 
-    class Solution {
+    static class Solution {
         public int removeDuplicates(int[] nums) {
             if (nums.length == 1) {
                 return 1;
@@ -91,7 +91,7 @@ public class Q26_RemoveDuplicatesFromSortedArray {
     }
 
     private static void testCase() {
-        Solution solution = new Q26_RemoveDuplicatesFromSortedArray().new Solution();
+        Solution solution = new Solution();
 
         for (int i = 0; i < 1000; i++) {
             int[] nums = ArrayUtils.genRandomArr();

@@ -35,14 +35,14 @@ import java.util.Arrays;
  */
 public class Q121_BestTimeToBuyAndSellStock {
     public static void main(String[] args) {
-        Solution solution = new Q121_BestTimeToBuyAndSellStock().new Solution();
+        Solution solution = new Solution();
         int[] arr = {};
         System.out.println(solution.maxProfit(arr));
         testCase();
     }
 
     private static void testCase() {
-        Solution solution = new Q121_BestTimeToBuyAndSellStock().new Solution();
+        Solution solution = new Solution();
         for (int i = 0; i < 100; i++) {
             int[] prices = ArrayUtils.genRandomArr();
             System.out.println(Arrays.toString(prices));
@@ -52,7 +52,7 @@ public class Q121_BestTimeToBuyAndSellStock {
         }
     }
 
-    class Solution {
+    static class Solution {
         public int maxProfit(int[] prices) {
             int minProfit = Integer.MAX_VALUE;
             int maxProfit = 0;

@@ -24,7 +24,7 @@ import java.util.Arrays;
  */
 public class Q42_TrappingRainWater {
     public static void main(String[] args) {
-        Solution solution = new Q42_TrappingRainWater().new Solution();
+        Solution solution = new Solution();
         int[] arr = {3, 9, 1, 7};
         System.out.println(solution.trap(arr));
 
@@ -32,7 +32,7 @@ public class Q42_TrappingRainWater {
     }
 
     private static void testCase() {
-        Solution solution = new Q42_TrappingRainWater().new Solution();
+        Solution solution = new Solution();
         for (int i = 0; i < 100; i++) {
             int[] height = ArrayUtils.genRandomArr();
             System.out.println(Arrays.toString(height));
@@ -43,7 +43,7 @@ public class Q42_TrappingRainWater {
     /**
      * 每个柱子能装的雨水量：先找到这个柱子左右两边最高的柱子，然后用两个柱子的较小值 - 当前柱子的高度
      */
-    class Solution {
+    static class Solution {
         public int trap(int[] height) {
             int res = 0;
 

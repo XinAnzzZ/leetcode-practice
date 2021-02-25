@@ -34,16 +34,16 @@ package com.yuhangma.leetcode.practice.F_number;
  */
 public class Q9_PalindromeNumber {
     public static void main(String[] args) {
-        Solution solution = new Q9_PalindromeNumber().new Solution();
+        Solution solution = new Solution();
         System.out.println(solution.isPalindrome(12455421));
         testCase();
     }
 
     private static void testCase() {
-        Solution solution = new Q9_PalindromeNumber().new Solution();
+        Solution solution = new Solution();
     }
 
-    class Solution {
+    static class Solution {
         public boolean isPalindrome(int x) {
             if (x < 0) {
                 return false;

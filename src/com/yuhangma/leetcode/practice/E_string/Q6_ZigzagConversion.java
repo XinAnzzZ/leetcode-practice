@@ -43,16 +43,16 @@ import java.util.List;
  */
 public class Q6_ZigzagConversion {
     public static void main(String[] args) {
-        Solution solution = new Q6_ZigzagConversion().new Solution();
+        Solution solution = new Solution();
 
         testCase();
     }
 
     private static void testCase() {
-        Solution solution = new Q6_ZigzagConversion().new Solution();
+        Solution solution = new Solution();
     }
 
-    class Solution {
+    static class Solution {
         public String convert(String s, int numRows) {
             if (numRows == 1) {
                 return s;

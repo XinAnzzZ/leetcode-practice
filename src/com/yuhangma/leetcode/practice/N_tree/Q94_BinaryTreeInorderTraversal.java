@@ -27,15 +27,15 @@ import java.util.List;
  */
 public class Q94_BinaryTreeInorderTraversal {
     public static void main(String[] args) {
-        Solution solution = new Q94_BinaryTreeInorderTraversal().new Solution();
+        Solution solution = new Solution();
         testCase();
     }
 
     private static void testCase() {
-        Solution solution = new Q94_BinaryTreeInorderTraversal().new Solution();
+        Solution solution = new Solution();
     }
 
-    class Solution {
+    static class Solution {
         public List<Integer> inorderTraversal(TreeNode root) {
             return null;
         }

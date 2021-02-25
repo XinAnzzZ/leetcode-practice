@@ -53,16 +53,16 @@ import java.util.Map;
  */
 public class Q20_ValidParentheses {
     public static void main(String[] args) {
-        Solution solution = new Q20_ValidParentheses().new Solution();
+        Solution solution = new Solution();
         System.out.println(solution.isValid("()"));
         testCase();
     }
 
     private static void testCase() {
-        Solution solution = new Q20_ValidParentheses().new Solution();
+        Solution solution = new Solution();
     }
 
-    class Solution {
+    static class Solution {
         public boolean isValid(String s) {
             Deque<Character> stack = new ArrayDeque<>();
             Map<Character, Character> mapping = new HashMap<Character, Character>() {{

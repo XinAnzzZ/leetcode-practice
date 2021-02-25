@@ -50,12 +50,12 @@ import com.yuhangma.leetcode.practice.base.TreeNode;
  */
 public class Q701_InsertIntoABinarySearchTree {
     public static void main(String[] args) {
-        Solution solution = new Q701_InsertIntoABinarySearchTree().new Solution();
+        Solution solution = new Solution();
         testCase();
     }
 
     private static void testCase() {
-        Solution solution = new Q701_InsertIntoABinarySearchTree().new Solution();
+        Solution solution = new Solution();
     }
 
 
@@ -74,7 +74,7 @@ public class Q701_InsertIntoABinarySearchTree {
      * }
      * }
      */
-    class Solution {
+    static class Solution {
         public TreeNode insertIntoBST(TreeNode root, int val) {
             return null;
         }

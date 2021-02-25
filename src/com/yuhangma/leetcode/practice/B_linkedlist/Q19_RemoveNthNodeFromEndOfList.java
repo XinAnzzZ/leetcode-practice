@@ -27,14 +27,14 @@ import com.yuhangma.leetcode.practice.base.ListNode;
  */
 public class Q19_RemoveNthNodeFromEndOfList {
     public static void main(String[] args) {
-        Solution solution = new Q19_RemoveNthNodeFromEndOfList().new Solution();
+        Solution solution = new Solution();
         ListNode listNode = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
         System.out.println(listNode);
         ListNode newList = solution.removeNthFromEnd(listNode, 3);
         System.out.println(newList);
     }
 
-    class Solution {
+    static class Solution {
         public ListNode removeNthFromEnd(ListNode head, int n) {
             // 造一个虚拟节点，为了更方便的删除头结点
             ListNode virtualHead = new ListNode(0);

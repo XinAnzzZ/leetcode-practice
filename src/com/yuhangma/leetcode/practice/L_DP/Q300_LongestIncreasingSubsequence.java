@@ -25,15 +25,15 @@ package com.yuhangma.leetcode.practice.L_DP;
  */
 public class Q300_LongestIncreasingSubsequence {
     public static void main(String[] args) {
-        Solution solution = new Q300_LongestIncreasingSubsequence().new Solution();
+        Solution solution = new Solution();
         testCase();
     }
 
     private static void testCase() {
-        Solution solution = new Q300_LongestIncreasingSubsequence().new Solution();
+        Solution solution = new Solution();
     }
 
-    class Solution {
+    static class Solution {
         public int lengthOfLIS(int[] nums) {
             return 0;
         }

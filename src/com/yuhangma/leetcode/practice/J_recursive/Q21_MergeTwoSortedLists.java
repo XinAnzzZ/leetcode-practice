@@ -20,7 +20,7 @@ import com.yuhangma.leetcode.practice.base.ListNode;
  */
 public class Q21_MergeTwoSortedLists {
     public static void main(String[] args) {
-        Solution solution = new Q21_MergeTwoSortedLists().new Solution();
+        Solution solution = new Solution();
         ListNode l1 = new ListNode(1);
         ListNode l2 = new ListNode(1);
         System.out.println(solution.mergeTwoLists(l1, l2));
@@ -28,10 +28,10 @@ public class Q21_MergeTwoSortedLists {
     }
 
     private static void testCase() {
-        Solution solution = new Q21_MergeTwoSortedLists().new Solution();
+        Solution solution = new Solution();
     }
 
-    class Solution {
+    static class Solution {
         public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
             ListNode cur1 = l1;
             ListNode cur2 = l2;

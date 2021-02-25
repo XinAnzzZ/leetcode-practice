@@ -1,4 +1,5 @@
-//给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。 
+//给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，
+// 并返回他们的数组下标。
 //
 // 你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。 
 //
@@ -27,11 +28,11 @@ import java.util.Map;
 public class Q1_TwoSum {
     public static void main(String[] args) {
         int[] nums = {2, 7, 11, 15};
-        Solution1 solution1 = new Q1_TwoSum().new Solution1();
+        Solution1 solution1 = new Solution1();
         System.out.println(Arrays.toString(solution1.twoSum(nums, 26)));
 
 
-        Solution2 solution2 = new Q1_TwoSum().new Solution2();
+        Solution2 solution2 = new Solution2();
         System.out.println(Arrays.toString(solution2.twoSum(nums, 26)));
 
     }
@@ -39,7 +40,7 @@ public class Q1_TwoSum {
     /**
      * 暴力递归，时间复杂度 O(n^2)
      */
-    class Solution1 {
+    static class Solution1 {
         public int[] twoSum(int[] nums, int target) {
             int[] result = new int[2];
             for (int i = 0; i < nums.length; i++) {
@@ -58,7 +59,7 @@ public class Q1_TwoSum {
     /**
      * 利用 hash map
      */
-    class Solution2 {
+    static class Solution2 {
         public int[] twoSum(int[] nums, int target) {
             Map<Integer, Integer> map = new HashMap<>((int) ((float) nums.length / 0.75F + 1.0F));
             for (int i = 0; i < nums.length; i++) {

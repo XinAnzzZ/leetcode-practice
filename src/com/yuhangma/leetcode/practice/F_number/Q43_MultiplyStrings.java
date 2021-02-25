@@ -31,13 +31,13 @@ import java.util.Random;
  */
 public class Q43_MultiplyStrings {
     public static void main(String[] args) {
-        Solution solution = new Q43_MultiplyStrings().new Solution();
+        Solution solution = new Solution();
         System.out.println(solution.multiply("123", "456"));
         // testCase();
     }
 
     private static void testCase() {
-        Solution solution = new Q43_MultiplyStrings().new Solution();
+        Solution solution = new Solution();
         Random random = new Random();
         for (int i = 0; i < 100000; i++) {
             int num1 = random.nextInt(100000);
@@ -53,7 +53,7 @@ public class Q43_MultiplyStrings {
         }
     }
 
-    class Solution {
+    static class Solution {
         public String multiply(String num1, String num2) {
             if (num1.equals("0") || num2.equals("0")) {
                 return "0";

@@ -30,12 +30,12 @@ import java.util.List;
  */
 public class Q15_ThreeSum {
     public static void main(String[] args) {
-        Solution solution = new Q15_ThreeSum().new Solution();
+        Solution solution = new Solution();
         int[] nums = {-4, -2, 1, -5, -4, -4, 4, -2, 0, 4, 0, -2, 3, 1, -5, 0};
         System.out.println(solution.threeSum(nums));
     }
 
-    class Solution {
+    static class Solution {
         public List<List<Integer>> threeSum(int[] nums) {
 
             List<List<Integer>> res = new ArrayList<>();

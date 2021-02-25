@@ -42,15 +42,15 @@ import com.yuhangma.leetcode.practice.base.TreeNode;
  */
 public class Q98_ValidateBinarySearchTree {
     public static void main(String[] args) {
-        Solution solution = new Q98_ValidateBinarySearchTree().new Solution();
+        Solution solution = new Solution();
         testCase();
     }
 
     private static void testCase() {
-        Solution solution = new Q98_ValidateBinarySearchTree().new Solution();
+        Solution solution = new Solution();
     }
 
-    class Solution {
+    static class Solution {
         public boolean isValidBST(TreeNode root) {
             return false;
         }

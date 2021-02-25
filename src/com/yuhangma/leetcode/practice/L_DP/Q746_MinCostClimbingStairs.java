@@ -35,17 +35,17 @@ package com.yuhangma.leetcode.practice.L_DP;
  */
 public class Q746_MinCostClimbingStairs {
     public static void main(String[] args) {
-        Solution solution = new Q746_MinCostClimbingStairs().new Solution();
+        Solution solution = new Solution();
         int[] arr = {1, 100, 1, 1, 1, 100, 1, 1, 100, 1};
         System.out.println(solution.minCostClimbingStairs(arr));
         testCase();
     }
 
     private static void testCase() {
-        Solution solution = new Q746_MinCostClimbingStairs().new Solution();
+        Solution solution = new Solution();
     }
 
-    class Solution {
+    static class Solution {
         public int minCostClimbingStairs(int[] cost) {
             int[] dp = new int[cost.length];
             dp[0] = cost[0];

@@ -24,7 +24,7 @@ import com.yuhangma.leetcode.practice.base.ListNode;
  */
 public class Q2_AddTwoNumbers {
     public static void main(String[] args) {
-        Solution1 solution = new Q2_AddTwoNumbers().new Solution1();
+        Solution1 solution = new Solution1();
         ListNode listNode1 = new ListNode(1, new ListNode(1, new ListNode(1)));
         ListNode listNode2 = new ListNode(2, new ListNode(9));
         ListNode listNode = solution.addTwoNumbers(listNode1, listNode2);
@@ -35,7 +35,7 @@ public class Q2_AddTwoNumbers {
         }
     }
 
-    class Solution1 {
+    static class Solution1 {
         public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
             // 进位数
             int carry = 0;

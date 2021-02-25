@@ -26,13 +26,13 @@ import java.util.Arrays;
  */
 public class Q209_MinimumSizeSubarraySum {
     public static void main(String[] args) {
-        Solution solution = new Q209_MinimumSizeSubarraySum().new Solution();
+        Solution solution = new Solution();
         System.out.println(solution.minSubArrayLen(20, new int[]{4, 9, 3, 5, 7, 9, 1}));
         testCase();
     }
 
     private static void testCase() {
-        Solution solution = new Q209_MinimumSizeSubarraySum().new Solution();
+        Solution solution = new Solution();
         for (int i = 0; i < 100; i++) {
             int[] nums = ArrayUtils.genRandomArr(1, 10);
             System.out.println(Arrays.toString(nums));
@@ -41,7 +41,7 @@ public class Q209_MinimumSizeSubarraySum {
         }
     }
 
-    class Solution {
+    static class Solution {
         public int minSubArrayLen(int s, int[] nums) {
             if (nums.length <= 0) {
                 return 0;

@@ -20,7 +20,7 @@ import com.yuhangma.leetcode.practice.base.ListNode;
  */
 public class Q206_ReverseLinkedList {
     public static void main(String[] args) {
-        Solution solution = new Q206_ReverseLinkedList().new Solution();
+        Solution solution = new Solution();
         ListNode listNode = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
         System.out.println(solution.reverseList(listNode));
     }
@@ -28,7 +28,7 @@ public class Q206_ReverseLinkedList {
     /**
      * 递归
      */
-    class Solution {
+    static class Solution {
         public ListNode reverseList(ListNode head) {
 
             if (head == null) {
@@ -50,7 +50,7 @@ public class Q206_ReverseLinkedList {
     /**
      * 迭代
      */
-    class Solution2 {
+    static class Solution2 {
         public ListNode reverseList(ListNode head) {
             if (head == null) {
                 return null;

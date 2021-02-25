@@ -30,16 +30,16 @@ import java.util.List;
  */
 public class Q87_Subsets {
     public static void main(String[] args) {
-        Solution solution = new Q87_Subsets().new Solution();
+        Solution solution = new Solution();
 
         testCase();
     }
 
     private static void testCase() {
-        Solution solution = new Q87_Subsets().new Solution();
+        Solution solution = new Solution();
     }
 
-    class Solution {
+    static class Solution {
         public List<List<Integer>> subsets(int[] nums) {
             List<List<Integer>> res = new ArrayList<>();
             backtrack(0, nums, res, new ArrayList<>());
@@ -56,7 +56,7 @@ public class Q87_Subsets {
         }
     }
 
-    class Solution2 {
+    static class Solution2 {
         List<List<Integer>> output = new ArrayList<>();
         int k;
 

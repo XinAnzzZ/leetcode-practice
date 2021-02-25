@@ -32,16 +32,16 @@ package com.yuhangma.leetcode.practice.F_number;
  */
 public class Q7_ReverseInteger {
     public static void main(String[] args) {
-        Solution solution = new Q7_ReverseInteger().new Solution();
+        Solution solution = new Solution();
         System.out.println(solution.reverse(1001011));
         testCase();
     }
 
     private static void testCase() {
-        Solution solution = new Q7_ReverseInteger().new Solution();
+        Solution solution = new Solution();
     }
 
-    class Solution {
+    static class Solution {
         public int reverse(int x) {
             int res = 0;
             int max = Integer.MAX_VALUE / 10;

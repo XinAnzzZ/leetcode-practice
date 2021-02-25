@@ -49,16 +49,16 @@ import com.yuhangma.leetcode.practice.base.ListNode;
  */
 public class Q141_LinkedListCycle {
     public static void main(String[] args) {
-        Solution solution = new Q141_LinkedListCycle().new Solution();
+        Solution solution = new Solution();
         System.out.println(solution.hasCycle(new ListNode(1, new ListNode(2))));
         testCase();
     }
 
     private static void testCase() {
-        Solution solution = new Q141_LinkedListCycle().new Solution();
+        Solution solution = new Solution();
     }
 
-    public class Solution {
+    public static class Solution {
         public boolean hasCycle(ListNode head) {
             if (head == null || head.next == null) {
                 return false;

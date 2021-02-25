@@ -28,12 +28,12 @@ package com.yuhangma.leetcode.practice;
 
 public class FindTheDuplicateNumber {
     public static void main(String[] args) {
-        Solution solution = new FindTheDuplicateNumber().new Solution();
+        Solution solution = new Solution();
         int[] ints = {3, 1, 3, 4, 2};
         System.out.println(solution.findDuplicate(ints));
     }
 
-    class Solution {
+    static class Solution {
         public int findDuplicate(int[] nums) {
             int[] ints = new int[nums.length];
             for (int num : nums) {

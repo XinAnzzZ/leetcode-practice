@@ -34,16 +34,16 @@ import java.util.List;
  */
 public class Q763_PartitionLabels {
     public static void main(String[] args) {
-        Solution solution = new Q763_PartitionLabels().new Solution();
+        Solution solution = new Solution();
         System.out.println(solution.partitionLabels("a"));
         testCase();
     }
 
     private static void testCase() {
-        Solution solution = new Q763_PartitionLabels().new Solution();
+        Solution solution = new Solution();
     }
 
-    class Solution {
+    static class Solution {
         public List<Integer> partitionLabels(String s) {
             // 记录 a-z 最后一次出现的位置
             int[] lastIndexArr = new int[26];

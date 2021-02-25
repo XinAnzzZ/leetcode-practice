@@ -31,19 +31,19 @@ import java.util.Set;
  */
 public class Q202_HappyNumber {
     public static void main(String[] args) {
-        Solution solution = new Q202_HappyNumber().new Solution();
+        Solution solution = new Solution();
         System.out.println(solution.isHappy(20));
         testCase();
     }
 
     private static void testCase() {
-        Solution solution = new Q202_HappyNumber().new Solution();
+        Solution solution = new Solution();
     }
 
     /**
      * 快慢指针
      */
-    class Solution {
+    static class Solution {
         public boolean isHappy(int n) {
             int slower = n;
             int faster = calc(n);
@@ -69,7 +69,7 @@ public class Q202_HappyNumber {
     /**
      * 暴力
      */
-    class Solution2 {
+    static class Solution2 {
         public boolean isHappy(int n) {
             Set<Integer> set = new HashSet<>();
             while (set.add(n)) {

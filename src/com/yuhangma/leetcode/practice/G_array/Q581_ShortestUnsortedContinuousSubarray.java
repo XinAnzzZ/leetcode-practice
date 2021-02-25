@@ -29,17 +29,17 @@ import java.util.ArrayDeque;
  */
 public class Q581_ShortestUnsortedContinuousSubarray {
     public static void main(String[] args) {
-        Solution solution = new Q581_ShortestUnsortedContinuousSubarray().new Solution();
+        Solution solution = new Solution();
         int[] arr = {1, 2, 3, 3, 3};
         System.out.println(solution.findUnsortedSubarray(arr));
         testCase();
     }
 
     private static void testCase() {
-        Solution solution = new Q581_ShortestUnsortedContinuousSubarray().new Solution();
+        Solution solution = new Solution();
     }
 
-    class Solution {
+    static class Solution {
         public int findUnsortedSubarray(int[] nums) {
             // 递增栈
             ArrayDeque<Integer> incrStack = new ArrayDeque<>();

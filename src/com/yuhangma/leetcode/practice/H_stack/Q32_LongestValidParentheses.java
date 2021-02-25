@@ -26,16 +26,16 @@ import java.util.ArrayDeque;
  */
 public class Q32_LongestValidParentheses {
     public static void main(String[] args) {
-        Solution solution = new Q32_LongestValidParentheses().new Solution();
+        Solution solution = new Solution();
         System.out.println(solution.longestValidParentheses(")))"));
         testCase();
     }
 
     private static void testCase() {
-        Solution solution = new Q32_LongestValidParentheses().new Solution();
+        Solution solution = new Solution();
     }
 
-    class Solution {
+    static class Solution {
         public int longestValidParentheses(String s) {
             ArrayDeque<Integer> stack = new ArrayDeque<>();
             stack.push(-1);

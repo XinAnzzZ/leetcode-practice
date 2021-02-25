@@ -45,16 +45,16 @@ package com.yuhangma.leetcode.practice.L_DP;
  */
 public class Q62_UniquePaths {
     public static void main(String[] args) {
-        Solution solution = new Q62_UniquePaths().new Solution();
+        Solution solution = new Solution();
         System.out.println(solution.uniquePaths(7, 3));
         testCase();
     }
 
     private static void testCase() {
-        Solution solution = new Q62_UniquePaths().new Solution();
+        Solution solution = new Solution();
     }
 
-    class Solution {
+    static class Solution {
         public int uniquePaths(int m, int n) {
             int[][] dp = new int[m][n];
             for (int i = 0; i < m; i++) {

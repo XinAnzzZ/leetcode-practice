@@ -29,16 +29,16 @@ import java.util.List;
  */
 public class Q118_PascalsTriangle {
     public static void main(String[] args) {
-        Solution solution = new Q118_PascalsTriangle().new Solution();
+        Solution solution = new Solution();
         System.out.println(solution.generate(5));
         testCase();
     }
 
     private static void testCase() {
-        Solution solution = new Q118_PascalsTriangle().new Solution();
+        Solution solution = new Solution();
     }
 
-    class Solution {
+    static class Solution {
 
         public List<List<Integer>> generate(int numRows) {
             List<List<Integer>> res = new ArrayList<>();

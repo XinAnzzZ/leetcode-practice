@@ -35,17 +35,17 @@ import java.util.Arrays;
  */
 public class Q945_MinimumIncrementToMakeArrayUnique {
     public static void main(String[] args) {
-        Solution solution = new Q945_MinimumIncrementToMakeArrayUnique().new Solution();
+        Solution solution = new Solution();
         int[] arr = {3, 2, 1, 2, 1, 7};
         System.out.println(solution.minIncrementForUnique(arr));
         testCase();
     }
 
     private static void testCase() {
-        Solution solution = new Q945_MinimumIncrementToMakeArrayUnique().new Solution();
+        Solution solution = new Solution();
     }
 
-    class Solution {
+    static class Solution {
         public int minIncrementForUnique(int[] A) {
             Arrays.sort(A);
             int count = 0;

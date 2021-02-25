@@ -53,15 +53,15 @@ package com.yuhangma.leetcode.practice.L_DP;
  */
 public class Q1277_CountSquareSubmatricesWithAllOnes {
     public static void main(String[] args) {
-        Solution solution = new Q1277_CountSquareSubmatricesWithAllOnes().new Solution();
+        Solution solution = new Solution();
         testCase();
     }
 
     private static void testCase() {
-        Solution solution = new Q1277_CountSquareSubmatricesWithAllOnes().new Solution();
+        Solution solution = new Solution();
     }
 
-    class Solution {
+    static class Solution {
         public int countSquares(int[][] matrix) {
             int m = matrix.length;
             int n = matrix[0].length;

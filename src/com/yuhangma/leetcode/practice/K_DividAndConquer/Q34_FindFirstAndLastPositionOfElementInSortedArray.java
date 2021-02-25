@@ -26,17 +26,17 @@ import java.util.Arrays;
  */
 public class Q34_FindFirstAndLastPositionOfElementInSortedArray {
     public static void main(String[] args) {
-        Solution solution = new Q34_FindFirstAndLastPositionOfElementInSortedArray().new Solution();
+        Solution solution = new Solution();
         int[] arr = {5, 7, 7, 8, 8, 10};
         System.out.println(Arrays.toString(solution.searchRange(arr, 8)));
         testCase();
     }
 
     private static void testCase() {
-        Solution solution = new Q34_FindFirstAndLastPositionOfElementInSortedArray().new Solution();
+        Solution solution = new Solution();
     }
 
-    class Solution {
+    static class Solution {
         public int[] searchRange(int[] nums, int target) {
             int[] res = {-1, -1};
             if (nums == null || nums.length == 0) {
